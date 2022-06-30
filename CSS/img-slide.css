@@ -17,6 +17,7 @@
     box-shadow: 0 6px 103px 0 rgba(0, 0, 0, .71);
     transition: transform .3s cubic-bezier(.175,.885,.32,1.275),-webkit-transform .3s cubic-bezier(.175,.885,.32,1.275);
 }
+
 #slider:hover {
     transform: scaleX(1.03) scaleY(1.03);
 }
