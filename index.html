@@ -4,38 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="CSS/img-slide.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>Document</title>
 </head>
+<style type="text/css">
+body{
+  /* padding: auto; */
+}
+#slide-box{
+  margin:auto;
+  position: relative;
+  max-width: 900px;
+  min-width: 300px;
+  overflow: hidden;
+}
+#slide-box ul{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#slide-box ul li{
+  list-style-type: none;
+}
+#slide-box ul li img,
+#slide-box ul li{width: 100%;}
+</style>
 <body>
-  <div id="slider">
-  <p class="control_next"><i class="fas fa-angle-right"></i></p>
-  <p class="control_prev"><i class="fas fa-angle-left"></i></p>
+<div id="slide-box">
   <ul>
-		<li class="slide1">
-			<div class="slider-title-wrapper">
-				<h3 class="slider-title"><span class="slider-title-h3">Slide 1</span>
-        <span class="slider-subtitle">This is the first slide</span></h3>
-			</div>
-			<img src="img/img-1.jpg" alt="">
-		</li>
-		<!-- <li class="slide2">
-			<div class="slider-title-wrapper">
-				<h3 class="slider-title"><span class="slider-title-h3">Slide 2</span>
-				<span class="slider-subtitle">This is the second slide</span></h3>
-			</div>
-		  <img src="img/img-2.jpg" alt="">
-    </li> -->
-		<!-- <li class="slide3">
-			<div class="slider-title-wrapper">
-				<h3 class="slider-title"><span class="slider-title-h3">Slide 3</span>
-				<span class="slider-subtitle">This is the third slide</span></h3>
-			</div>
-			<img src="img/img-3.jpg" alt="">
-		</li> -->
-	 </ul>
+    <li><img src="img/img-1.jpg" alt=""></li>
+    <li><img src="img/img-2.jpg" alt=""></li>
+    <li><img src="img/img-3.jpg" alt=""></li>
+  </ul>
 </div>
-<!-- <script type="text/javascript" src="JS/img-slide.js"></script> -->
+  <script type="text/javascript">
+jQuery(document).ready(function($){
+  // main()
+  var BoxWidth = $("#slide-box").width();
+  var SlideCount = $("#slide-box ul li").length;
+  $("#slide-box ul").css({width:BoxWidth*SlideCount,height:BoxWidth/2});
+  //time to change img..
+  setInterval(function () {
+    moveRight();
+  }, 3000);//3sec
+  //fun() to img ride-side...
+  function moveRight(){
+    $('#slide-box ul').animate({
+      left: - BoxWidth
+    }, 300, function () {
+      $('#slide-box ul li:first-child').appendTo('#slide-box ul');
+      $('#slide-box ul').css('left', '');
+    });
+  };
+  //for responsive slide-box
+  $(window).resize(function(){
+    BoxWidth = $("#slide-box").width();
+    $("#slide-box").css({height:BoxWidth/2});
+    BoxWidth = $("#slide-box").width();
+    $("#slide-box ul").css({width:BoxWidth*SlideCount,height:BoxWidth/2});
+  });
+});
+
+
+  </script>
 </body>
 </html>
