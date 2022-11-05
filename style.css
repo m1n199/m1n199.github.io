@@ -1,0 +1,177 @@
+body {
+    width: 100%;
+    height: 100%;
+    height: 1200px;
+    background-color: #c0c0c0;
+    box-sizing: border-box;
+}
+.hidden {
+    display: none;
+}
+.pre-load-content {
+
+    background-image: url(./img/menu-bg.jpg);
+    position: absolute;
+    z-index: 200;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+.pre-load-content img {
+    position: relative;
+    top: 11rem;
+    width: 18rem;
+    height: 4rem;
+}
+
+/* 2nd pattern */
+header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: .6s;
+    transition-timing-function: ease-in-out;
+    color: #EBDFD4;
+}
+
+.toggle-menu .fa {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100%;
+    line-height: 48px;
+}
+
+.toggle-menu {
+    padding: .3rem;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 4rem;
+    border-right: 0.1rem solid #EBDFD4;
+    border-bottom: 0.1rem solid #EBDFD4;
+}
+
+.header-link {
+    float: right;
+}
+
+.header-link span {
+    padding: 1rem;
+    float: left;
+    height: 4rem;
+    border-left: 0.1rem solid #EBDFD4;
+    border-bottom: 0.1rem solid #EBDFD4;
+    margin: 0;
+}
+
+.header-link span a {
+    color: inherit;
+    font-family: "freight-big-pro";
+}
+
+.scrolled header {
+    background: #091b1e;
+    height: 4rem;
+}
+
+.logo img {
+    max-width: 20rem;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+
+.scrolled .logo img {
+    max-width: 15rem;
+    margin-left: 6rem;
+    margin-top: .6rem;
+}
+
+.menu ul {
+    padding: 0;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu {
+    background-image: url(./img/menu-bg.jpg);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    left: -100rem;
+    z-index: 10;
+    text-align: center;
+    padding-top: 8rem;
+    transition-property: left;
+    transition-duration: .7s;
+    transition-timing-function: ease-out;
+}
+
+.menu {
+    font-size: 2.5rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #EBDFD4;
+}
+
+.menu-btn a {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    color: #091b1e;
+    background-color: #EBDFD4;
+    border: .2rem solid #EBDFD4;
+}
+
+.menu-btn div {
+    margin-top: 1rem;
+}
+
+.menu-btn a:hover {
+    color: #EBDFD4;
+    background-color: #091b1e;
+
+}
+
+.isMenu .menu {
+    left: 0;
+    transition-duration: 1.3s;
+
+}
+
+
+@media(max-width: 810px) {
+    .header-link {
+        display: none;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .logo img {
+        max-width: 14rem;
+        margin-left: 4rem;
+    }
+
+    .scrolled .logo img {
+        max-width: 12rem;
+        margin-left: 3rem;
+    }
+
+    .menu {
+        font-size: 1.8rem;
+        padding-top: 5rem;
+    }
+
+}
