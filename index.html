@@ -10,79 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <style type="text/css">
-        .side-text-logo span {
-            visibility: hidden;
-        }
-        .animation .side-text-logo span {
-            visibility: visible;
-        }
-        .side-text-logo {
-            font-size: 1.5rem;
-            font-weight: bolder;
-            color: #EBDFD4;
-            width: 4rem;
-            height: 100%;
-            border-right: .1rem solid #EBDFD4;
-        }
-        .side-text-logo {
-            float: left;
-            padding-left: 1.3rem;
-        }
-        .title-header div {
-            /* display: flex; */
-        }
-        .content.container-fluid {
-            padding-left: 0;
-            padding-right: 0;
-            height: 100%;
-        }
-        .content .title-header {
-            padding-top: 4rem;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(./img/home-bg-1.png);
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            height: 100%;
-        }
-        .content .title-header .title span {
-            visibility: hidden;
-            transition-property: visibility;
-        }
-        .animation .content .title-header .title span {
-            visibility: visible;
-        }
-
-        .content .title-header .title {
-            color: #EBDFD4;
-            padding-top: 6rem;
-            text-align: center;
-            float: left;
-            padding-left: 2rem;
-        }
-        .content .title-header .title p{
-            display: inline-block;
-        }
-        .content .title-header .title  .slogan{
-            font-size: 1.5rem;
-        }
-        .content .title-header .title  .intro{
-            font-size: 4rem;
-        }
-        @media(max-width: 810px) {
-            .content .title-header {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(./img/food/food-2.jpeg);
-            }
-            .content .title-header .title {
-                float: left;
-                padding-left: 0;
-            }   
-            .content .title-header .title  .slogan {
-                font-size: 1.1rem;
-            }
-            .content .title-header .title  .intro{
-                font-size: 3rem;
-            }
-        }
+     
     </style>
 </head>
 <body class="ishome">
@@ -129,21 +57,7 @@
     </div>
         <script type="text/javascript" src="./custom.js"></script>
     <script type="text/javascript">
-        var slogan = (" F a s t&nbsp; <p></p> F o o d,&nbsp; <p></p> S l o w&nbsp; <p></p> p r i c e s,&nbsp; <p></p> F a s t&nbsp; <p></p> s e r v i c e ...").split(" ");
-        var intro = ("G a d w a l l&nbsp; <p></p> I n s p i r e d&nbsp; <p></p> T a s t e ...").split(" ");
-        var trans_time = .4;
-        $(document).ready(function () {
-            function animateText ($class, text) {
-                text.forEach((e) => {
-                    var text = `<span style='transition-delay: ${trans_time.toFixed(2)}s;'>${e}</span>`;
-                    var $span = $(text);
-                    $class.append($span);
-                    trans_time += 0.05;
-                });
-            }
-            animateText($(".title-header .slogan"), slogan);
-            animateText($(".title-header .intro"), intro);
-      })
+        
     </script>
 </body>
 </html>
