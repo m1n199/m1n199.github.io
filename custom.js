@@ -1,12 +1,8 @@
 var logo = ("F a r m e r &nbsp; D e l i g h t ").split(" ");
 var trans_time = .4;
-function ShowContent() {
-    document.getElementById("root").classList.remove('hidden');
-}
 $(window).on("load", function () {
     setTimeout(function () {
         $(".pre-load-content").fadeOut("slow");
-        setTimeout(ShowContent, 1_000);
     }, 1_000);
     
 });
@@ -21,6 +17,9 @@ $(window).on("scroll", function () {
     }
 });
 $(document).ready(function () {
+    setTimeout(function (){
+        $(".wrapper").removeClass("hidden")
+    }, 1_000);
     setTimeout(function () {
         $("body").addClass("animation");
     }, 1_500);
