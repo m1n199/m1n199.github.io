@@ -16,8 +16,8 @@ body > .container-fluid {
 }
 
 .pre-load-content {
-
-    background-image: url(./img/menu-bg.jpg);
+    background-color: #091b1e;
+    background-image: url(./img/menu-desktop-bg.jpg);
     position: absolute;
     z-index: 200;
     width: 100%;
@@ -109,7 +109,7 @@ header {
 }
 
 .menu {
-    background-image: url(./img/menu-bg.jpg);
+    background-image: url(./img/menu-desktop-bg.jpg);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -218,7 +218,7 @@ header {
   .content .title-header .title .slogan {
       font-size: 1.5rem;
   }
-  
+
   .content .title-header .title .intro {
       font-size: 4rem;
   }
