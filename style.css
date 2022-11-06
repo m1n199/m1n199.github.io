@@ -8,6 +8,7 @@ body {
 body > .container-fluid {
     padding-left: 0;
     padding-right: 0;
+    height: 100%;
 }
 
 .hidden {
@@ -157,6 +158,7 @@ header {
 
 
 @media(max-width: 810px) {
+    
     .header-link {
         display: none;
     }
@@ -179,5 +181,9 @@ header {
         font-size: 1.8rem;
         padding-top: 5rem;
     }
+    .side-text-logo {
+        display: none;
+    }
 
+ 
 }

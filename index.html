@@ -34,12 +34,30 @@
         .content.container-fluid {
             padding-left: 0;
             padding-right: 0;
-            padding-top: 4rem;
+            height: 100%;
+        }
+        .content .title-header {
+            padding-top: 10rem;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(./img/home-bg-1.png);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100%;
         }
         .content .title-header .title {
+            color: #EBDFD4;
             padding-top: 2rem;
+            font-size: 1.1rem;
+            text-align: center;
         }
-
+        .content .title-header .title  .intro{
+            font-size: 2rem;
+        }
+        @media(max-width: 810px) {
+            .content .title-header {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(./img/food/food-2.jpeg);
+            }
+        }
     </style>
 </head>
 <body class="ishome">
@@ -79,23 +97,27 @@
                 <div class="side-text-logo"></div>
                 <div class="title">
                     <div class="slogan"></div>
-                    <div class="intro">with Gadwall Inspired menu...<br /> </div>
+                    <div class="intro"></div>
                 </div>
             </div>
         </div>
     </div>
         <script type="text/javascript" src="./custom.js"></script>
     <script type="text/javascript">
-        var slogan = ("F a s t &nbsp F o o d, &nbsp; S l o w &nbsp; p r i c e s, &nbsp; F a s t &nbsp; s e r v i c e ...").split(" ");
+        var slogan = ("F a s t &nbsp F o o d, &nbsp; <br> S l o w &nbsp; p r i c e s, &nbsp; F a s t &nbsp; s e r v i c e ...").split(" ");
+        var intro = ("G a d w a l l &nbsp; I n s p i r e d &nbsp; T a s t e ...").split(" ");
         var trans_time = .4;
-      $(document).ready(function () {
-          var $textSlogan = $(".title-header .slogan");
-          slogan.forEach((e) => {
-              var text = `<span style='transition-delay: ${trans_time.toFixed(2)}s;'>${e}</span>`;
-              var $span = $(text);
-              $textSlogan.append($span);
-              trans_time += 0.1;
-          });
+        $(document).ready(function () {
+            function animateText ($class, text) {
+                text.forEach((e) => {
+                    var text = `<span style='transition-delay: ${trans_time.toFixed(2)}s;'>${e}</span>`;
+                    var $span = $(text);
+                    $class.append($span);
+                    trans_time += 0.1;
+                });
+            }
+            animateText($(".title-header .slogan"), slogan);
+            animateText($(".title-header .intro"), intro);
       })
     </script>
 </body>
