@@ -11,18 +11,39 @@
     <link rel="stylesheet" href="./style.css">
     <style type="text/css">
         .side-text-logo span {
-            visibility: hidden;
-            transition-property: visibility;
-            transition-timing-function: ease-in;
-            transition: .7s;
+            /* visibility: hidden; */
         }
         .animation .side-text-logo span {
             visibility: visible;
         }
+        .side-text-logo {
+            font-size: 1.5rem;
+            font-weight: bolder;
+            color: #EBDFD4;
+            width: 4rem;
+            height: 100%;
+            border-right: .1rem solid #EBDFD4;
+        }
+        .side-text-logo {
+            float: left;
+            padding-left: 1.3rem;
+        }
+        .title-header div {
+            /* display: flex; */
+        }
+        .content.container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 4rem;
+        }
+        .content .title-header .title {
+            padding-top: 2rem;
+        }
+
     </style>
 </head>
 <body class="ishome">
-    <div class="pre-load-content text-center"><img src="./img/logo-2.png" alt="logo" /></div>
+    <!-- <div class="pre-load-content text-center"><img src="./img/logo-2.png" alt="logo" /></div> -->
     <div class="container-fluid">
         <div class="menu">
             <ul class="menu-list">
@@ -53,23 +74,29 @@
                 <span><a href="#">Reservation</a></span>
             </div>
         </header>
-        <div class="title-header">
-            <div class="side-text-logo"></div>
+        <div class="container-fluid content">
+            <div class="title-header">
+                <div class="side-text-logo"></div>
+                <div class="title">
+                    <div class="slogan"></div>
+                    <div class="intro">with Gadwall Inspired menu...<br /> </div>
+                </div>
+            </div>
         </div>
     </div>
-   <script type="text/javascript" src="./custom.js"></script>
+        <script type="text/javascript" src="./custom.js"></script>
     <script type="text/javascript">
-        var logo = ("F a r m e r &nbsp; D e l i g h t ").split(" ");
+        var slogan = ("F a s t &nbsp F o o d, &nbsp; S l o w &nbsp; p r i c e s, &nbsp; F a s t &nbsp; s e r v i c e ...").split(" ");
         var trans_time = .4;
-        $(document).ready(function () {
-            var $textLogo = $(".side-text-logo");
-            logo.forEach((e) => {
-                var text = `<span style='transition-delay: ${trans_time.toFixed(2)}s;'>${e}</span><br />`;
-                var $p = $(text);
-                $textLogo.append($p);
-                trans_time += 0.1;
-            })
-        })
+      $(document).ready(function () {
+          var $textSlogan = $(".title-header .slogan");
+          slogan.forEach((e) => {
+              var text = `<span style='transition-delay: ${trans_time.toFixed(2)}s;'>${e}</span>`;
+              var $span = $(text);
+              $textSlogan.append($span);
+              trans_time += 0.1;
+          });
+      })
     </script>
 </body>
 </html>

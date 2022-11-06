@@ -5,9 +5,15 @@ body {
     background-color: #c0c0c0;
     box-sizing: border-box;
 }
+body > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .hidden {
     display: none;
 }
+
 .pre-load-content {
 
     background-image: url(./img/menu-bg.jpg);
